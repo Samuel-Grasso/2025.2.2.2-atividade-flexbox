@@ -3,3 +3,27 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root {
+    --cor-primaria: #006494;
+    --cor-secundaria: #247BA0;
+    --cor-fundo: #13293D;
+    --cor-texto: #E8F1F2;
+    --cor-destaque: #ff6600;
+    --fonte-principal: 'Arial', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--cor-primaria);
+}
+
+header img {
+    width: 40px;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+}
