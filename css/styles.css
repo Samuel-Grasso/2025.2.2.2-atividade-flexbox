@@ -3,13 +3,26 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
     --cor-primaria: #006494;
     --cor-secundaria: #247BA0;
     --cor-fundo: #13293D;
     --cor-texto: #E8F1F2;
-    --cor-destaque: #ff6600;
-    --fonte-principal: 'Arial', sans-serif;
+    --cor-destaque: #2f9e41;
+    --fonte-principal: 'Roboto', sans-serif;
+}
+body {
+    padding-bottom: 35px;
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -17,6 +30,7 @@ header {
     align-items: center;
     padding: 10px;
     background-color: var(--cor-primaria);
+    box-shadow: #13293D 6px 6px 15px -1px;
 }
 
 header img {
@@ -24,6 +38,275 @@ header img {
 }
 
 header h1 {
+    color: var(--cor-texto);
     flex: 1;
     text-align: center;
+}
+
+.vagas {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Mobile padrão: 1 coluna */
+.vagas {
+    grid-template-columns: 1fr;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero a {
+    text-decoration: none;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 10px -4px #13293D;
+}
+
+.hero a:hover {
+    background-color: #267a33;
+    transform: scale(1.05) translateY(-3px);
+}
+.card-full {
+    width: 90%;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 6px 15px -3px #00000088;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Title inside the card */
+.card-full h2 {
+    margin-bottom: 5px;
+    color: var(--cor-texto);
+}
+
+/* Paragraph */
+.card-full p {
+    line-height: 1.6;
+}
+
+/* Button / Link */
+.card-full a {
+    align-self: center;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 10px -4px #13293D;
+}
+
+.card-full a:hover {
+    background-color: #267a33;
+    transform: scale(1.05) translateY(-3px);
+}
+
+
+.sobre {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: var(--cor-texto);
+}
+
+.contatos {
+    width: 100%;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 30px 20px;
+    margin: 30px auto;
+    box-shadow: 0 6px 15px -3px #00000088;
+}
+
+.contatos h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contatos ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contatos li strong {
+    color: var(--cor-texto); /* nomes normais */
+}
+
+.contatos a {
+    color: var(--cor-destaque); /* links em destaque */
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contatos a:hover {
+    text-decoration: underline;
+    filter: brightness(1.15);
+}
+
+.mobile-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+.mobile-menu a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    gap: 2px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+.mobile-menu .material-icons {
+    font-size: 24px;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 2000;
+        justify-content: space-between;
+        padding-right: 25px;
+    }
+
+    .desktop-menu {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .desktop-menu .menu-icon {
+        cursor: pointer;
+        font-size: 32px;
+        color: var(--cor-texto);
+        transition: 0.2s ease;
+        user-select: none;
+    }
+
+    .desktop-menu .menu-icon:hover {
+        transform: scale(1.1);
+        color: var(--cor-destaque);
+    }
+
+    /* DROPDOWN */
+    .desktop-menu .menu-dropdown {
+        display: none;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        background-color: var(--cor-secundaria);
+        padding: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+        min-width: 200px;
+        list-style: none;
+        flex-direction: column;
+        z-index: 2500;
+    }
+
+    .desktop-menu .menu-dropdown li {
+        width: 100%;
+    }
+
+    .desktop-menu .menu-dropdown a {
+        display: block;
+        padding: 12px 20px;
+        text-decoration: none;
+        color: var(--cor-texto);
+        transition: 0.2s ease;
+    }
+
+    .desktop-menu .menu-dropdown a:hover {
+        background-color: var(--cor-primaria);
+        padding-left: 28px;
+    }
+
+    .desktop-menu .menu-dropdown.show {
+        display: flex;
+    }
+}
+
+/* Hide on desktop */
+@media (min-width: 1024px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+/* Tablet: 2 colunas */
+@media (min-width: 768px) {
+    .vagas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 colunas */
+@media (min-width: 1024px) {
+    .vagas {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

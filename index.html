@@ -7,11 +7,184 @@
     <meta name="keywords" content="IFRN, pesquisa, extensão, oportunidades, trabalho, projetos">
     <title>IFRN - Vagas</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body id="topo">
     <header>
-        <img src="images/logoifrn.png" alt="Logo do IFRN" style='width: 40px;'>
+        <a href="#topo">
+        <img src="images/logoverdif.png" alt="Logo do IFRN" style='width: 40px;'>
+        </a>
         <h1>IFRN</h1>
+        <nav class="desktop-menu">
+            <div class="menu-wrapper">
+                <span class="material-icons menu-icon" id="menuToggle">menu</span>
+
+                <ul class="menu-dropdown" id="menuDropdown">
+                    <li><a href="#topo">Início</a></li>
+                    <li><a href="#vagas">Vagas</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
+    <div class="hero">
+        <h2>Construa seu Futuro com o IFRN</h2>
+        <p>Encontre oportunidades de trabalho em projetos de pesquisa e extensão no IFRN. Explore as vagas disponíveis e participe de iniciativas que fazem a diferença na comunidade acadêmica e na sociedade.</p>
+        <a href="#vagas" class="btn">Ver Vagas</a>
+    </div>
+    <section id="vagas" class="vagas">
+    <div id="vaga1" class="card-full">
+        <h2>Estágio – Suporte Técnico e Infraestrutura</h2>
+        <p><strong>Requisitos:</strong></p>
+        <ul>
+            <li>Montagem e manutenção de computadores</li>
+            <li>Noções de redes</li>
+            <li>Atendimento ao usuário</li>
+        </ul>
+        <p><strong>Bolsa:</strong> R$ 700,00 + Auxílio transporte</p>
+        <p><strong>Descrição:</strong> Atuar no suporte ao laboratório de informática e configuração de equipamentos.</p>
+        <a href="#" class="btn">Candidatar-se</a>
+    </div>
+    </div>
+    <div class="card-full">
+        <h2>Estágio – Desenvolvimento Mobile</h2>
+        <p><strong>Requisitos:</strong></p>
+        <ul>
+            <li>Flutter ou React Native</li>
+            <li>Noções de integração com APIs</li>
+            <li>Git básico</li>
+        </ul>
+        <p><strong>Bolsa:</strong> R$ 1.000,00</p>
+        <p><strong>Descrição:</strong> Apoiar o desenvolvimento de aplicativos estudantis e sistemas móveis do campus.</p>
+        <a href="#" class="btn">Candidatar-se</a>
+    </div>
+    <div class="card-full">
+        <h2>Estágio – Ciência de Dados</h2>
+        <p><strong>Requisitos:</strong></p>
+        <ul>
+            <li>Python (Pandas, Numpy)</li>
+            <li>Noções de estatística</li>
+            <li>Visualização de dados</li>
+        </ul>
+        <p><strong>Bolsa:</strong> R$ 1.100,00</p>
+        <p><strong>Descrição:</strong> Trabalhar com análise de dados institucionais e construção de dashboards.</p>
+        <a href="#" class="btn">Candidatar-se</a>
+    </div>
+    <div class="card-full">
+        <h2>Estágio – Desenvolvimento Web</h2>
+        <p><strong>Requisitos:</strong></p>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Noções de Git</li>
+            <li>Conhecimento básico de APIs REST</li>
+        </ul>
+        <p><strong>Bolsa:</strong> R$ 800,00 + Auxílio transporte</p>
+        <p><strong>Descrição:</strong> Atuar no desenvolvimento e manutenção de páginas web internas.</p>
+        <a href="#" class="btn">Candidatar-se</a>
+    </div>
+    <div class="card-full">
+        <h2>Estágio – Banco de Dados</h2>
+        <p><strong>Requisitos:</strong></p>
+        <ul>
+            <li>SQL básico (MySQL ou PostgreSQL)</li>
+            <li>Normalização de dados</li>
+            <li>Noções de modelagem ER</li>
+        </ul>
+        <p><strong>Bolsa:</strong> R$ 900,00</p>
+        <p><strong>Descrição:</strong> Auxiliar na manutenção de bancos de dados institucionais e construção de relatórios.</p>
+        <a href="#" class="btn">Candidatar-se</a>
+    </div>
+    <div class="card-full">
+        <h2>Estágio – QA / Testes de Software</h2>
+        <p><strong>Requisitos:</strong></p>
+        <ul>
+            <li>Conhecimento de testes manuais</li>
+            <li>Noções de testes automatizados</li>
+            <li>Organização e documentação</li>
+        </ul>
+        <p><strong>Bolsa:</strong> R$ 850,00 + Auxílio transporte</p>
+        <p><strong>Descrição:</strong> Criar casos de teste, testar aplicações internas e reportar falhas.</p>
+        <a href="#" class="btn">Candidatar-se</a>
+    </div>
+    </section>
+    <section id="sobre" class="sobre">
+        <h2>Sobre o IFRN</h2>
+        <p>
+            O Instituto Federal do Rio Grande do Norte (IFRN) é uma instituição pública 
+            de educação reconhecida nacionalmente pela qualidade de seus cursos e pela 
+            forte atuação em pesquisa, inovação e extensão. Presente em diversas regiões 
+            do estado, o IFRN oferece formação integrada, superior e pós-graduação, 
+            preparando profissionais para os desafios do mercado atual.
+        </p>
+
+        <p>
+            Nesta plataforma, você encontra vagas de estágio e participação em 
+            projetos, permitindo que estudantes ampliem sua experiência, construam 
+            seus portfólios e contribuam diretamente para iniciativas que impactam 
+            positivamente a sociedade.
+        </p>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2>Contatos</h2>
+        <p>Entre em contato para mais informações sobre cursos, projetos ou oportunidades no IFRN.</p>
+
+        <ul>
+            <li>
+                <strong>Site do IFRN:</strong>
+                <a href="https://portal.ifrn.edu.br" target="_blank">portal.ifrn.edu.br
+                    <span class="material-icons">open_in_new</span>
+                </a>
+            </li>
+
+            <li>
+                <strong>Site do Curso de TADS:</strong>
+                <a href="https://diatinf.ifrn.edu.br/cursos/tecnologia-em-analise-e-desenvolvimento-de-sistemas/" target="_blank">
+                    TADS – IFRN
+                    <span class="material-icons">open_in_new</span>
+                </a>
+            </li>
+
+            <li>
+                <strong>Email:</strong>
+                <a href="mailto:contato@ifrn.edu.br">contato@ifrn.edu.br
+                    <span class="material-icons">open_in_new</span>
+                </a>
+            </li>
+
+            <li>
+                <strong>Telefone:</strong>
+                <a href="tel:+558432004000">(84) 3204-4000</a>
+            </li>
+        </ul>
+    </section>
+
+<nav class="mobile-menu">
+    <a href="#topo">
+        <span class="material-icons">home</span>
+        <p>Início</p>
+    </a>
+
+    <a href="#vaga1">
+        <span class="material-icons">work</span>
+        <p>Vagas</p>
+    </a>
+
+    <a href="#sobre">
+        <span class="material-icons">diversity_3</span>
+        <p>Sobre</p>
+    </a>
+
+    <a href="#contatos">
+        <span class="material-icons">call</span>
+        <p>Contato</p>
+    </a>
+</nav>
+<script>
+    document.getElementById("menuToggle").addEventListener("click", function () {
+        document.getElementById("menuDropdown").classList.toggle("show");
+    });
+</script>
 </body>
 </html>
